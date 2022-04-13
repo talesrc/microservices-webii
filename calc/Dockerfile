@@ -4,8 +4,10 @@ EXPOSE 3000
 
 WORKDIR /calc
 
-COPY . .
+COPY package.json .
 
 RUN npm install
+
+COPY . .
 
 CMD [ "npm", "start" ]
